@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Твоє імя на мові Brawl Stars</title>
+  </head>
+  <body>
+    <main>
+      <h2>Твоє імя на мові Brawl Stars</h2>
+      <div class="main--div">
+        <div class="header--img">
+          <img
+            class="bravler--icon"
+            src="/imgs/brawlerQuestion.png"
+            alt="герой бравла"
+          />
+        </div>
+        <!-- cart number -->
+        <form class="form--cart" action="">
+          <div class="form-group">
+            <label for="ccn">Номер карти</label>
+            <input
+              id="ccn"
+              type="tel"
+              inputmode="numeric"
+              pattern="[0-9\s]{13,19}"
+              autocomplete="cc-number"
+              maxlength="19"
+              placeholder="xxxx xxxx xxxx xxxx"
+              required
+              oninput="checkInputs()"
+            />
+          </div>
+          <!-- date -->
+          <div class="form-group">
+            <label for="date">Діє до</label>
+            <input
+              type="tel"
+              placeholder="10/25"
+              maxlength="5"
+              id="date"
+              required
+              oninput="checkInputs()"
+            />
+          </div>
+
+          <!-- Person name -->
+          <div class="form-group">
+            <label for="name-person">Імя пользователя карти</label>
+            <input
+              type="text"
+              name="name-person"
+              id="name-person"
+              placeholder="Прізвище імя латиницею"
+              required
+              oninput="checkInputs()"
+            />
+          </div>
+
+          <!-- cvv number -->
+          <div class="form-group">
+            <label for="cvv">CVC2/CVV2</label>
+            <input
+              type="tel"
+              name="CVV2"
+              maxlength="3"
+              id="cvv"
+              placeholder="***"
+              required
+              oninput="checkInputs()"
+            />
+          </div>
+
+          <div class="form-group">
+            <button type="submit" name="" class="submit--button" disabled>
+              SEND
+            </button>
+          </div>
+        </form>
+      </div>
+      <p class="text"></p>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
